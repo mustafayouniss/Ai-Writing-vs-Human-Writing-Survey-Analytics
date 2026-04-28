@@ -1,60 +1,166 @@
-# 🚀 AI vs Human Writing Survey Analytics 🤖✍️
+# 🤖 AI Writing vs Human Writing — Survey Analytics
 
-![Dashboard Preview](media/Written_Questions_Analysis_Dashboard.PNG)
+<div align="center">
 
-Welcome to the **AI vs Human Writing Survey Analytics** project! ✨
-This project aims to study and analyze the differences and perceptions between texts written by Artificial Intelligence and those written by Humans. This is achieved through data processing, Sentiment Analysis, and building an interactive Dashboard. 📊🧠
+![Main Dashboard](media/Written_Questions_Analysis_Dashboard.PNG)
+
+### *Bridging the gap between human perception and AI-generated content through data-driven analysis*
+
+[![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)](https://python.org)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=flat-square)](https://powerbi.microsoft.com)
+[![Scikit-Learn](https://img.shields.io/badge/ML-Random%20Forest%2082%25-green?style=flat-square)](https://scikit-learn.org)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)]()
+
+</div>
 
 ---
 
-## 🌟 Features
+## 📌 Overview
 
-- **Sentiment Analysis & Classification:** 🎭 A robust Python script (`classify_sentiment.py`) was developed to accurately analyze and classify survey responses.
-- **Interactive Power BI Dashboard:** 📈 The `Written_Analysis.pbix` file provides a comprehensive dashboard that visually displays the results and insights in an engaging and easy-to-understand format for decision-making.
-- **Detailed Documentation:** 📚 The `documentation` folder contains PDF files that explain every phase of the project step-by-step.
+This project investigates how humans perceive and distinguish between **AI-generated** and **human-written** text. Using a structured survey with **256 participants**, we built a complete analytics pipeline — from raw data collection to predictive machine learning — to uncover patterns in human judgment.
+
+> **Key Result:** Our best model achieves **82.2% accuracy** in predicting whether a participant will label a text as *Human* or *AI*.
+
+---
+
+## ✨ What This Project Does
+
+| Phase | Tool | Description |
+|-------|------|-------------|
+| 📊 **Descriptive Analytics** | Power BI | Interactive dashboards exploring demographics, opinions, and writing preferences |
+| 🧪 **Inferential Analytics** | Python (scipy) | Statistical hypothesis testing (Chi-Square, Kruskal-Wallis, Logistic Regression) |
+| 🤖 **Predictive Modeling** | Scikit-Learn | Binary classification: *Who wrote this text — AI or Human?* |
+| 📝 **Sentiment Analysis** | Python (NLP) | Classifying open-ended written responses into Positive / Neutral / Negative |
+
+---
+
+## 📸 Visualization Gallery
+
+### 🏠 Power BI Dashboards
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="media/demographic-dashboard.PNG" width="420" alt="Demographic Dashboard">
+        <br><b>Demographic Dashboard</b><br>
+        <i>Age, gender & field of study distribution</i>
+      </td>
+      <td align="center">
+        <img src="media/ai-writing-perception-dashboard.PNG" width="420" alt="AI Perception Dashboard">
+        <br><b>AI Writing Perception</b><br>
+        <i>How participants rate and feel about AI writing</i>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="media/ai-vs-human-writing-comparison.PNG" width="420" alt="AI vs Human Comparison">
+        <br><b>AI vs Human Comparison</b><br>
+        <i>Side-by-side perception analysis of both writing styles</i>
+      </td>
+      <td align="center">
+        <img src="media/Written_Questions_Analysis_Dashboard.PNG" width="420" alt="Written Questions Dashboard">
+        <br><b>Written Questions Analysis</b><br>
+        <i>Sentiment analysis of open-ended written responses</i>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 🧠 Machine Learning Results
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="media/target_distribution.png" width="350" alt="Target Distribution">
+        <br><b>Target Distribution</b><br>
+        <i>Balanced dataset: 122 Human vs 102 AI labels</i>
+      </td>
+      <td align="center">
+        <img src="media/eda_charts.png" width="350" alt="EDA Charts">
+        <br><b>Exploratory Analysis</b><br>
+        <i>Attribution patterns by gender & AI preference</i>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="media/confusion_matrix.png" width="350" alt="Confusion Matrix">
+        <br><b>Model Evaluation (82% Accuracy)</b><br>
+        <i>Confusion matrix — 37 correct out of 45 test samples</i>
+      </td>
+      <td align="center">
+        <img src="media/feature_importance.png" width="350" alt="Feature Importance">
+        <br><b>Feature Importance</b><br>
+        <i>Top predictors: text clarity, complexity rating, AI tool usage</i>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <img src="media/attribution_by_demographics.png" width="750" alt="Attribution by Demographics">
+  <br><b>Attribution by Demographics</b>
+  <br><i>How different demographic groups distribute their Human vs AI judgments</i>
+</div>
 
 ---
 
 ## 📂 Project Structure
 
-Here is an overview of the project's files and directories:
-
-```text
+```
 Ai-Writing-vs-Human-Writing-Survey-Analytics/
 │
-├── 📁 media/
-│   └── 🖼️ Written_Questions_Analysis_Dashboard.PNG     # Final dashboard preview image
-│
 ├── 📁 data/
-│   ├── 📊 Written Questions.xlsx                       # Original raw survey data
-│   └── 📊 Written Questions_classified.xlsx            # Processed and sentiment-classified data
+│   ├── Written Questions.xlsx               # Raw survey responses
+│   ├── Written Questions_classified.xlsx    # Sentiment-classified responses
+│   └── cleaned_data.xlsx                   # Processed MCQ data (256 × 21)
+│
+├── 📁 media/                               # All charts and dashboard images
 │
 ├── 📁 documentation/
-│   ├── 📄 Phase_1.pdf                                  # Phase 1 documentation
-│   ├── 📄 Phase_2.pdf                                  # Phase 2 documentation
-│   ├── 📄 Phase_3.pdf                                  # Phase 3 documentation
-│   ├── 📄 phase_4&5.pdf                                # Phases 4 & 5 documentation
-│   └── 📄 Phases Explanation.pdf                       # General explanation of all phases
+│   ├── Full_Documentation.html             # 📄 Comprehensive A4 documentation
+│   ├── Summary_Report.html                 # 📋 Executive summary report
+│   └── [Phase PDFs...]                     # Phase-by-phase legacy docs
 │
-├── 🐍 classify_sentiment.py                            # Python script for sentiment analysis
-├── 📈 Written_Analysis.pbix                            # Power BI Dashboard file
-└── 📝 README.md                                        # This file!
+├── 📓 Attribution_Model.ipynb              # ML model: predicts AI vs Human
+├── 📓 Inferential.ipynb                    # Statistical hypothesis testing
+├── 🐍 classify_sentiment.py               # Sentiment classification script
+└── 📈 MCQ & Written Questions Analysis.pbix # Merged Power BI dashboard
 ```
 
 ---
 
-## 🛠️ How to Use This Project?
+## 🚀 Quick Start
 
-1. **Data Processing:** You can explore the `classify_sentiment.py` script to understand how the raw data (`Written Questions.xlsx`) was processed to produce the classified version (`Written Questions_classified.xlsx`). ⚙️
-2. **Explore Insights:** Open the `Written_Analysis.pbix` file using **Power BI Desktop** to dive into the numbers and interact with the visuals. 📉🔍
-3. **Review Documentation:** To dive deeper into the methodology and steps taken in each phase, please read the PDF files located in the `documentation` folder. 📖🤓
-
----
-
-**This project was built with passion! ❤️ We hope you find exploring it both useful and enjoyable! 🚀**
+1. **Explore the Data** — Open `data/cleaned_data.xlsx` to see the raw survey structure
+2. **Run the Model** — Open `Attribution_Model.ipynb` and run all cells (requires Python + scikit-learn)
+3. **View Dashboards** — Open `MCQ & Written Questions Analysis.pbix` in Power BI Desktop
+4. **Read the Docs** — Open `documentation/Full_Documentation.html` in any browser → Print as PDF
 
 ---
 
-## 👨‍💻 Author
+## 📊 Key Results at a Glance
 
-**Mustafa Younis**
+```
+Dataset:     256 survey participants × 21 questions
+Model:       Random Forest Classifier
+Accuracy:    82.2% (37/45 correct on test set)
+Best Feature: Text clarity rating (Text 2)
+```
+
+---
+
+## 🛠️ Tech Stack
+
+`Python` · `pandas` · `scikit-learn` · `matplotlib` · `seaborn` · `scipy` · `statsmodels` · `Power BI`
+
+---
+
+<div align="center">
+
+**Built with passion for Data Science & Human-AI Interaction Research** ❤️
+
+**Author:** Mustafa Younis · April 2026
+
+</div>
